@@ -13,6 +13,11 @@ This repository serves as a template for creating new projects with a well-defin
 │   ├── implementation_plan.md  # Step-by-step implementation guide
 │   └── tech_stack.md     # Technology stack and dependencies
 ├── src/                  # Source code directory
+│   ├── config/          # Configuration files
+│   ├── data/           # Data models and database interactions
+│   ├── services/       # Business logic and service layer
+│   ├── utils/          # Utility functions and helpers
+│   └── main.py         # Application entry point
 ├── tests/               # Test files directory
 └── requirements.txt     # Project dependencies
 ```
