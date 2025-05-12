@@ -17,6 +17,7 @@ This repository serves as a template for creating new projects with a well-defin
 │   ├── data/           # Data models and database interactions
 │   ├── services/       # Business logic and service layer
 │   ├── utils/          # Utility functions and helpers
+│   │   └── logger.py   # Logger module
 │   └── main.py         # Application entry point
 ├── tests/               # Test files directory
 └── requirements.txt     # Project dependencies
@@ -60,3 +61,43 @@ This template includes Cursor rules in the `.cursor` directory that help maintai
 ## Note
 
 This template is designed to be a starting point for new projects. Feel free to modify the structure and documentation to better suit your specific needs while maintaining the organized approach to project development.
+
+## Logger Module
+
+The logger module has been cleaned up to make it more generic and reusable. Here are the key changes made:
+
+1. Removed all database-specific logging functionality (`log_message` function)
+2. Updated the module docstring to be more generic
+3. Added proper log directory handling using `pathlib.Path`
+4. Made the file logging setup more flexible with configurable log directory
+5. Improved the default log file name to be more generic (`app.log` instead of `news_poster.log`)
+6. Added automatic creation of the logs directory if it doesn't exist
+7. Improved type hints and documentation
+
+The module now provides two main functions:
+
+1. `get_logger(name, level)`: Creates a logger with colored console output
+2. `setup_file_logging(log_dir, filename, level)`: Sets up file logging with configurable options
+
+To use this logger in your project, you can do something like this:
+
+```python
+from utils.logger import get_logger, setup_file_logging
+
+# Set up file logging (optional)
+setup_file_logging(log_dir="logs", filename="myapp.log")
+
+# Get a logger for your module
+logger = get_logger(__name__)
+
+# Use the logger
+logger.info("Application started")
+logger.error("Something went wrong")
+```
+
+The logger will output colored messages to the console and optionally save them to a file. The colors make it easy to distinguish between different log levels:
+- DEBUG: Dark grey
+- INFO: Grey
+- WARNING: Yellow
+- ERROR: Red
+- CRITICAL: Bold red
