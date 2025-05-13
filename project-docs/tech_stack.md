@@ -42,3 +42,78 @@ OPENAI_API_KEY=…
 DATABASE_URL=postgresql+asyncpg://user:pass@host:5432/dbname
 REDIS_URL=redis://localhost:6379/0
 JWT_SECRET=…
+
+```
+
+# Technology Stack
+
+## Development Environment
+- **IDE:** Cursor IDE with LLM integration
+- **Version Control:** Git
+- **Package Manager:** pip/poetry
+- **Environment Management:** venv/conda
+
+## Core Technologies
+- **Language:** Python 3.x
+- **Framework:** [Your Framework]
+- **Database:** [Your Database]
+- **API:** REST/GraphQL
+
+## LLM Integration
+- **Primary LLM:** [Your LLM Provider]
+- **Development Assistant:** Cursor IDE
+- **Code Generation:** [Your Code Generation Tools]
+- **Documentation:** [Your Documentation Tools]
+
+## Testing & Quality
+- **Testing Framework:** pytest
+- **Code Coverage:** coverage.py
+- **Linting:** flake8/pylint
+- **Formatting:** black
+- **Type Checking:** mypy
+
+## CI/CD
+- **CI Platform:** GitHub Actions
+- **Containerization:** Docker
+- **Deployment:** [Your Deployment Platform]
+
+## Monitoring & Logging
+- **Logging:** Custom logger module
+- **Monitoring:** [Your Monitoring Tool]
+- **Error Tracking:** [Your Error Tracking Tool]
+
+## Development Tools
+- **Code Generation:**
+  - Cursor IDE for LLM-assisted coding
+  - AI-powered code completion
+  - Automated test generation
+
+- **Documentation:**
+  - LLM-assisted documentation generation
+  - Automated API documentation
+  - Code comment generation
+
+- **Quality Assurance:**
+  - AI-powered code review
+  - Automated testing
+  - Performance optimization
+
+## Best Practices
+1. **LLM Integration**
+   - Use clear, specific prompts
+   - Review generated code
+   - Maintain documentation
+   - Follow coding standards
+
+2. **Development Workflow**
+   - Start with PRD
+   - Generate documentation
+   - Implement features
+   - Test thoroughly
+   - Deploy iteratively
+
+3. **Code Quality**
+   - Follow PEP 8
+   - Write comprehensive tests
+   - Document thoroughly
+   - Review regularly
